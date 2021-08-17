@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  database:
+    build:
+      context: ./data
+      dockerfile: dockerfile
+    container_name: simbirsoft
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: imbirsoft
+    volumes:
+      - ./data/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/mysql/data
+    ports:
+      - "5435:5432"
+volumes:
+  postgres_data:

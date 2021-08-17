@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Привет мир!</title>
+</head>
+<body>
+<div class="container">
+    <div>
+        <form th:action="@{/create}" method="GET">
+            Link:
+            <input type="text" th:name="link" />
+            <input type="submit" value="link" />
+        </form>
+    </div>
+</div>
+</body>
+</html>
