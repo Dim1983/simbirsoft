@@ -1,7 +1,6 @@
 package org.simbirsoft.dao.impl;
 
 import org.simbirsoft.dao.QueryDao;
-import org.simbirsoft.dao.impl.AbstractCrudDaoImpl;
 import org.simbirsoft.domain.Query;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
@@ -34,9 +33,9 @@ public class QueryCrudDaoImpl extends AbstractCrudDaoImpl<Query> implements Quer
     @Override
     public void insert(MapSqlParameterSource parameters, Query query) {
         System.out.println("Into insert" + query);
-        parameters.addValue("id",query.getID());
-        parameters.addValue("link",query.getLink());
-        parameters.addValue("wordandquantity",query.getWordAndQuantity());
+        parameters.addValue("id", query.getID());
+        parameters.addValue("link", query.getLink());
+        parameters.addValue("wordandquantity", query.getWordAndQuantity());
     }
 
     @Override
